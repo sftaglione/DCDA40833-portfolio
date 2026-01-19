@@ -4,15 +4,15 @@
    ========================= */
 
 /* =========================
-   CSS Variables (Color Scheme)
+    <!-- I customized the layout and styling of this page using CSS to match my personal style while keeping it easy to read-->
    ========================= */
 :root {
-    --primary-color: #4d1979;      /* TCU Purple */
-    --secondary-color: #7c3aed;    /* Light Purple */
-    --accent-color: #ffd700;       /* Gold accent */
+    --primary-color: #c784ff;      /* Purple */
+    --secondary-color: #3e0468;    /* Dark Purple */
+    --accent-color: #c784ff;       /* Purple accent */
     --text-color: #333;            /* Dark gray for text */
-    --text-secondary: #64748b;     /* Lighter gray for captions */
-    --bg-color: #f4f4f4;           /* Light background */
+    --text-secondary: #000000;     /* Black for captions */
+    --bg-color: #e6e0ea;           /* Light background */
     --white: #ffffff;
 }
 
@@ -161,9 +161,10 @@ main section li {
 }
 
 .viz-container img {
-    max-width: 100%;           /* Responsive: never wider than container */
-    height: auto;              /* Maintain aspect ratio */
-    border-radius: 8px;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 10px solid var(--secondary-color); /* Border added */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5rem;
 }
