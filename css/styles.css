@@ -162,11 +162,14 @@ main section li {
 
 .viz-container img {
     width: 300px;
+    max-width: 100%;   /* prevents overflow on small screens */
     height: auto;
     border-radius: 12px;
     border: 10px solid var(--secondary-color); /* Border added */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5rem;
+    display: block;
+    margin: 0 auto 0.5rem;
 }
 
 /* Figure captions */
