@@ -48,6 +48,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+header nav {
+    margin-top: -2rem;
+}
+
 header h1 {
     color: white;
     margin: 0 0 0.5rem 0;
