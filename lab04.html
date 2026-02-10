@@ -68,39 +68,57 @@
     <section>
         <h2>Reflection & Analysis</h2>
 
-        <h3>1. Data Preparation</h3>
+        <h3>Data Preparation</h3>
         <p>
-            <!-- Write your paragraph here -->
+     Before building the visualizations, I reviewed the dataset carefully to make sure I understood what each variable represented and how engagement rate was calculated. Since engagement rate is often expressed as a percentage, I needed to adjust the formatting in Tableau so the values displayed correctly instead of appearing as extremely large numbers. I also paid attention to how Tableau automatically aggregated measures. At first, some fields were summed when they should have been averaged, which significantly changed the interpretation of the results. For example, using SUM instead of AVG for engagement rate inflated values and made the chart misleading. Correcting these aggregation settings was an important step in ensuring the analysis was accurate.
         </p>
 
-        <h3>2. Design Choices</h3>
         <p>
-            <!-- Write your paragraph here -->
+    When building the scatterplot, I added Post ID to the Detail mark so each point represented an individual post instead of an aggregated cluster. Without this step, Tableau grouped the data together and masked variation between posts. This adjustment allowed me to see true distribution patterns and identify outliers more clearly. Overall, the dataset uploaded without major technical errors, but formatting and aggregation required careful attention to avoid distorted results.
         </p>
 
-        <h3>3. Expected Patterns</h3>
+<h3>Design Choices</h3>
         <p>
-            <!-- Write your paragraph here -->
+    I used bar charts to compare engagement rate by media type and by day of the week because bar charts make categorical comparisons easy to interpret. When the goal is to compare averages across defined groups, bars provide clear visual separation and make small differences more noticeable. For the relationship between engagement rate and follower count, I chose a scatterplot because I wanted to observe distribution, clustering, and potential correlation patterns rather than simple comparison.
         </p>
 
-        <h3>4. Surprises / Outliers</h3>
         <p>
-            <!-- Write your paragraph here -->
+    I added color by media type in the scatterplot to determine whether content format influenced engagement trends at different follower levels. I intentionally avoided adding unnecessary stylistic elements because I wanted the focus to remain on the data itself. My design decisions prioritized clarity, readability, and analytical purpose rather than decoration. I also adjusted axis formatting to ensure engagement rate displayed as a percentage, making the interpretation more intuitive.
         </p>
 
-        <h3>5. Questions for Further Investigation</h3>
-        <ul>
-            <li><!-- Question 1 --></li>
-            <li><!-- Question 2 --></li>
-            <li><!-- Question 3 --></li>
-        </ul>
-
-        <h3>6. Tool Evaluation</h3>
+<h3>Expected Patterns</h3>
         <p>
-            <!-- Write your paragraph here -->
+    Before creating the visualizations, I expected reels to show the highest engagement rate because Instagram’s algorithm often prioritizes short-form video content. I assumed that image posts would perform moderately well and carousels might have slightly lower engagement. I also predicted that engagement rate might gradually decrease as follower count increases. Larger accounts sometimes experience lower percentage engagement because their audiences are broader and potentially less niche.
         </p>
 
-    </section>
+        <p>
+    Additionally, I expected engagement to vary by day of the week, with mid-week posts performing more consistently than weekends. After examining the visualizations, some of these expectations were partially confirmed, while others were not as strong as I anticipated. The differences between media types were more subtle than I predicted, suggesting that content quality may matter more than format alone. The scatterplot showed variation across all follower levels, rather than a simple downward trend.
+        </p>
+
+<h3>Surprises / Outliers</h3>
+        <p>
+    One of the most interesting findings was how similar engagement rates were across media types. Instead of one format clearly outperforming the others, the averages were relatively close. This challenged my assumption that reels would dominate engagement metrics. In the scatterplot, several posts stood out as high-engagement outliers regardless of follower count. Some accounts with moderate follower numbers achieved engagement rates comparable to or higher than larger accounts.
+        </p>
+
+        <p>
+    The variation among accounts with similar follower counts was also noticeable. Posts within the same follower range showed dramatically different engagement levels, suggesting that audience size alone does not determine performance. These outliers raise questions about what additional factors might influence engagement, such as content category, timing, caption strategy, or use of calls to action.
+        </p>
+
+<h3>Questions for Further Investigation</h3>
+<ul>
+    <li>Does caption length significantly impact engagement rate across different media types?</li>
+    <li>Are high-engagement outliers driven by specific content categories rather than follower count?</li>
+    <li>Does time of posting interact with day of the week to influence engagement performance?</li>
+</ul>
+
+<h3>Tool Evaluation</h3>
+        <p>
+    Tableau Public made it easy to experiment with different dimensions and measures quickly. The drag-and-drop interface allowed me to test multiple visual combinations without writing code, which supports exploratory thinking. Compared to tools like Excel, Tableau offers stronger interactive visualization capabilities and cleaner presentation. At the same time, compared to coding in Python, Tableau provides less control over customization and deeper statistical modeling.
+        </p>
+
+        <p>
+    One limitation I encountered was the importance of understanding aggregation. Tableau automatically applies SUM or AVG, and if those are not carefully reviewed, the visualization can become misleading. Despite this, Tableau is highly effective for identifying patterns quickly and testing hypotheses visually. Overall, the platform supports analytical reasoning while still requiring thoughtful interpretation from the user.
+        </p>
 
 </main>
 
