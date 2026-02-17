@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 05: Vibe Coding for DCDA 40833">
+    <meta name="author" content="Sophia Taglione">
+    <title>Lab 05: Vibe Coding | Sophia Taglione</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+ <!-- Navigation: Links to all pages -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">Lab 02: AI Experimentation & Evaluation</a></li>
+            <li><a href="lab03.html">Lab 03: Visualization Critique</a></li>
+            <li><a href="lab04.html">Lab 04: Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 05: Vibe Coding</a></li>
+            <li><button id="darkModeBtn" class="dark-toggle">Dark Mode</button></li>
+
+        </ul>
+    </nav>
+
+<header>
+    <h1>Lab 05: Vibe Coding</h1>
+    <p>AI-Assisted Development | DCDA 40833</p>
+</header>
+
+<main>
+
+<section>
+<h2>Overview</h2>
+<p>
+For this lab, I explored what it actually means to use AI as a coding collaborator instead of just copying and pasting code without understanding it. The focus wasn’t just on building something new, but on making sure I could fully read, explain, and modify any code I decided to include in my portfolio. One of the biggest rules for this assignment was that if I can’t explain what a line of code does, I shouldn’t be using it. That forced me to slow down and really think through each step instead of just trusting the output.
+</p>
+
+<p>
+To apply that, I completed two experiments. First, I added a dark mode feature to my portfolio to enhance the user experience and practice integrating AI-generated JavaScript into an existing site. Second, I debugged a real issue in my navigation where a small file-name mistake caused a broken link. Both experiments required me to review the code line-by-line, test it, and make small adjustments so it actually worked within my own structure. Overall, this lab helped me see AI less as a shortcut and more as a tool that still requires active understanding and decision-making.
+</p>
+</section>
+
+<section>
+<h2>Experiment A: Portfolio Enhancement (Dark Mode)</h2>
+
+<p>
+I used AI to help generate the initial structure for a dark mode toggle.
+My goal was simple: when a user clicks a button in the navigation bar, the site switches to darker colors.
+I reviewed every line before adding it to my site and simplified parts so it matched my existing CSS structure.
+</p>
+
+<h3>Key Code Snippet</h3>
+
+<pre><code>
+// This grabs the dark mode button from the page
+const darkBtn = document.getElementById("darkModeBtn");
+
+// When the button is clicked, this function runs
+darkBtn.addEventListener("click", () => {
+
+    // This toggles the "dark-mode" class on the body
+    // If it's there, it removes it. If it's not, it adds it.
+    document.body.classList.toggle("dark-mode");
+
+});
+</code></pre>
+
+<p>
+Basically, this works by waiting for a click on the button. When it’s clicked, it adds or removes a class called “dark-mode” on the body element. The CSS handles the rest by changing the background and text colors whenever that class is active.
+</p>
+
+</section>
+
+<section>
+<h2>Experiment C: Debugging With AI</h2>
+
+<p>
+While reviewing my portfolio, I noticed my Lab 5 card on the home page did not match the actual filename of my lab page.
+The card linked to "lab5.html" but my file is named "lab05.html."
+This caused a broken navigation path.
+</p>
+
+<h3>What Was Wrong</h3>
+
+<p>
+Originally, my Lab 05 card linked to:
+</p>
+
+<pre><code>&lt;a href="Lab5.html"&gt;</code></pre>
+
+<p>
+But my actual file name is:
+</p>
+
+<pre><code>&lt;a href="Lab05.html"&gt;</code></pre>
+
+<p>
+That small difference (the missing 0) caused the navigation to break.
+</p>
+
+<p>
+The issue was that my link used <code>Lab5.html</code> instead of <code>Lab05.html</code>.
+That single missing zero caused the broken path.
+</p>
+
+<p>
+I identified the issue first, then used AI to confirm the fix.
+This experiment showed me that debugging is often about checking simple structural errors like file names and paths.
+AI was helpful in confirming my reasoning, but I still had to understand the root cause.
+</p>
+
+</section>
+
+<section>
+<h2>Reflection</h2>
+
+<p>For this lab, I used Chat GPT as a coding collaborator rather than just a code generator. The main feature the AI helped me build was a dark mode toggle for my portfolio. It generated JavaScript that selects a button, listens for a click event, and then toggles a “dark-mode” class on the body element. I also used AI to help confirm a debugging issue when I realized one of my navigation links was broken because of a file naming mismatch. In both cases, the AI provided a starting point, but I had to fully understand what it was doing before keeping any of it.</p>
+
+<p>The dark mode feature works by attaching an event listener to a button. When the button is clicked, it uses classList.toggle() to add or remove the “dark-mode” class from the body. The CSS I wrote defines different background and text colors when that class is active. I understand the overall logic and flow of this feature, even if I couldn’t have written it perfectly from memory on the first try. I would place myself in the “I understand the logic” category on the spectrum. I know what each line is doing and why it’s necessary, but I still rely on syntax reminders sometimes. The debugging experiment felt more straightforward because it was a structural issue. The AI confirmed that my broken link was due to using “Lab5.html” instead of “Lab05.html.” That showed me how small details can cause larger functional problems.</p>
+
+<p>AI was most helpful in accelerating the initial setup. Instead of spending time trying to remember exact syntax for event listeners, I could focus on understanding how the pieces worked together. However, it was also problematic when it generated slightly more complex solutions than necessary. I had to simplify parts of the code so it matched my existing structure and skill level. This made me realize that my role in an AI-assisted workflow is still critical. I am responsible for reviewing, testing, simplifying, and making sure the code aligns with my design and goals. AI can generate options, but it cannot judge whether they truly fit my project.</p>
+
+<p>In terms of learning trade-offs, vibe coding can help when it supports understanding, but it can hurt if it replaces it. If I blindly copy code, I miss the learning process. If I use AI to explore patterns and then break them down line-by-line, it becomes a learning tool. Moving forward, I plan to use AI for drafts, troubleshooting, and clarification, but I will not submit anything I cannot explain in my own words. This lab helped me see that responsible AI use is less about avoiding it and more about maintaining agency and understanding while using it.</p>
+</section>
+
+</main>
+
+<footer>
+    <p><a href="https://github.com/sftaglione/DCDA40833-portfolio">View my Repository on GitHub</a></p>
+    <p>&copy; 2026 Sophia Taglione | DCDA 40833 | TCU</p>
+</footer>
+
+<script>
+const darkBtn = document.getElementById("darkModeBtn");
+
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
+</script>
+
+</body>
+</html>
+
+
