@@ -38,23 +38,21 @@ For this lab, I explored what it actually means to use AI as a coding collaborat
 </p>
 
 <p>
-To apply that, I completed two experiments. First, I added a dark mode feature to my portfolio to enhance the user experience and practice integrating AI-generated JavaScript into an existing site. Second, I debugged a real issue in my navigation where a small file-name mistake caused a broken link. Both experiments required me to review the code line-by-line, test it, and make small adjustments so it actually worked within my own structure. Overall, this lab helped me see AI less as a shortcut and more as a tool that still requires active understanding and decision-making.
+To follow the directions, I completed two experiments. For Experiment A, I added a dark mode toggle feature to my portfolio. For Experiment C, I debugged a real issue in my navigation where a small file-name mistake caused a broken link. Both experiments made me review code line-by-line, test it on my site, and adjust things so it actually worked with my existing structure.
 </p>
 </section>
+
 
 <section>
 <h2>Experiment A: Portfolio Enhancement (Dark Mode)</h2>
 
 <p>
-I used AI to help generate the initial structure for a dark mode toggle.
-My goal was simple: when a user clicks a button in the navigation bar, the site switches to darker colors.
-I reviewed every line before adding it to my site and simplified parts so it matched my existing CSS structure.
+For this experiment, I used AI to help generate the starter code for a dark mode toggle. My goal was simple: add a button in my navigation that switches the site into a darker theme. I didn’t just paste the first thing I got back — I checked the logic, tested it, and adjusted styling so it matched the look of my portfolio.
 </p>
 
 <h3>Key Code Snippet</h3>
 
-<pre><code>
-// This grabs the dark mode button from the page
+ <pre><code>// This grabs the dark mode button from the page
 const darkBtn = document.getElementById("darkModeBtn");
 
 // When the button is clicked, this function runs
@@ -68,7 +66,7 @@ darkBtn.addEventListener("click", () => {
 </code></pre>
 
 <p>
-Basically, this works by waiting for a click on the button. When it’s clicked, it adds or removes a class called “dark-mode” on the body element. The CSS handles the rest by changing the background and text colors whenever that class is active.
+Basically, this works by listening for a click on the button. When it’s clicked, it turns a styling label called dark-mode on or off for the whole page. The CSS does the rest by changing background and text colors whenever that label is active.
 </p>
 
 </section>
@@ -77,62 +75,101 @@ Basically, this works by waiting for a click on the button. When it’s clicked,
 <h2>Experiment C: Debugging With AI</h2>
 
 <p>
-While reviewing my portfolio, I noticed my Lab 5 card on the home page did not match the actual filename of my lab page.
-The card linked to "lab5.html" but my file is named "lab05.html."
-This caused a broken navigation path.
+While reviewing my portfolio, I noticed my Lab 5 card on the home page wasn’t opening the lab page correctly on GitHub Pages. I checked the link and realized the card was pointing to lab5.html, but my actual file name is lab05.html. That one missing zero caused the navigation to break.
 </p>
 
 <h3>What Was Wrong</h3>
 
 <p>
-Originally, my Lab 05 card linked to:
+The homepage link originally pointed to:
 </p>
 
-<pre><code>&lt;a href="Lab5.html"&gt;</code></pre>
+ <pre><code>&lt;a href="lab5.html"&gt;</code></pre>
 
 <p>
 But my actual file name is:
 </p>
 
-<pre><code>&lt;a href="Lab05.html"&gt;</code></pre>
+<pre><code>&lt;a href="lab05.html"&gt;</code></pre>
 
 <p>
 That small difference (the missing 0) caused the navigation to break.
 </p>
 
 <p>
-The issue was that my link used <code>Lab5.html</code> instead of <code>Lab05.html</code>.
-That single missing zero caused the broken path.
-</p>
-
-<p>
-I identified the issue first, then used AI to confirm the fix.
-This experiment showed me that debugging is often about checking simple structural errors like file names and paths.
-AI was helpful in confirming my reasoning, but I still had to understand the root cause.
+I identified the issue first, then used AI to confirm the fix. This experiment honestly reminded me that debugging is sometimes about checking small details like file names and paths. AI helped confirm what I was thinking, but I still had to understand why the error happened.
 </p>
 
 </section>
 
 <section>
+            <h2>AI Prompts + AI Output (Documentation)</h2>
+
+            <p>
+                Below are examples of prompts I used and the type of output AI generated. I used these as a starting point, then tested and adjusted the code so it fit my portfolio.
+            </p>
+
+            <h3>Experiment A Prompt</h3>
+            <p><strong>Prompt:</strong> Help me add a beginner-friendly dark mode toggle to my portfolio site. I want a button in the navigation bar. When clicked, it should toggle dark mode by adding/removing a class on the body. Please give me the HTML button, the JavaScript, and the CSS.</p>
+
+            <h3>Experiment A Output Example (JavaScript)</h3>
+            <pre><code>const darkBtn = document.getElementById("darkModeBtn");
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});</code></pre>
+
+            <h3>Experiment C Prompt</h3>
+            <p><strong>Prompt:</strong> My Lab 5 card links to lab5.html, but my file is named lab05.html. GitHub Pages shows a broken page. What should I change?</p>
+
+            <h3>Experiment C Output Example (Before → After)</h3>
+            <pre><code><!-- Before -->
+&lt;a href="lab5.html"&gt;
+
+<!-- After -->
+&lt;a href="lab05.html"&gt;</code></pre>
+        </section>
+
+<section>
 <h2>Reflection</h2>
 
-<p>For this lab, I used Chat GPT as a coding collaborator rather than just a code generator. The main feature the AI helped me build was a dark mode toggle for my portfolio. It generated JavaScript that selects a button, listens for a click event, and then toggles a “dark-mode” class on the body element. I also used AI to help confirm a debugging issue when I realized one of my navigation links was broken because of a file naming mismatch. In both cases, the AI provided a starting point, but I had to fully understand what it was doing before keeping any of it.</p>
+<p>
+For this lab, I used ChatGPT as a coding collaborator rather than just a code generator. The main feature the AI helped me build was a dark mode toggle for my portfolio. It generated JavaScript that selects a button, listens for a click event, and toggles a “dark-mode” styling label on the body element. I also used AI to confirm a debugging issue when I realized one of my navigation links was broken because of a file naming mismatch. In both cases, the AI gave me a starting point, but I still had to understand what it was doing before keeping it.
+</p>
 
-<p>The dark mode feature works by attaching an event listener to a button. When the button is clicked, it uses classList.toggle() to add or remove the “dark-mode” class from the body. The CSS I wrote defines different background and text colors when that class is active. I understand the overall logic and flow of this feature, even if I couldn’t have written it perfectly from memory on the first try. I would place myself in the “I understand the logic” category on the spectrum. I know what each line is doing and why it’s necessary, but I still rely on syntax reminders sometimes. The debugging experiment felt more straightforward because it was a structural issue. The AI confirmed that my broken link was due to using “Lab5.html” instead of “Lab05.html.” That showed me how small details can cause larger functional problems.</p>
+<p>
+The dark mode feature works by attaching an event listener to the button. When clicked, it runs a function that uses classList.toggle() to add or remove “dark-mode” from the body element. The CSS changes the background and text colors when that mode is active. I understand the overall logic of how this works and could explain it to someone at my same skill level, even though I might still need help remembering exact syntax if I were doing it from scratch. I would place myself in the “I understand the logic” category on the understanding spectrum. The debugging experiment felt more straightforward because it was a structural issue. The link was broken because my homepage used lab5.html while my actual file was lab05.html. That reminded me how small details can completely break navigation.
+</p>
 
-<p>AI was most helpful in accelerating the initial setup. Instead of spending time trying to remember exact syntax for event listeners, I could focus on understanding how the pieces worked together. However, it was also problematic when it generated slightly more complex solutions than necessary. I had to simplify parts of the code so it matched my existing structure and skill level. This made me realize that my role in an AI-assisted workflow is still critical. I am responsible for reviewing, testing, simplifying, and making sure the code aligns with my design and goals. AI can generate options, but it cannot judge whether they truly fit my project.</p>
+<p>
+AI was most helpful in speeding up the starting point. Instead of spending a lot of time remembering syntax, I could focus on reading and understanding how the parts worked together. At the same time, AI can be problematic because it sometimes generates extra code or more complicated solutions than necessary. I had to simplify and adjust the output so it matched my site and didn’t create new issues. This lab made it clear that my role in an AI-assisted workflow is still the most important part. I’m responsible for reviewing, testing, and making final decisions. AI can generate options, but it can’t replace judgment or ownership.
+</p>
 
-<p>In terms of learning trade-offs, vibe coding can help when it supports understanding, but it can hurt if it replaces it. If I blindly copy code, I miss the learning process. If I use AI to explore patterns and then break them down line-by-line, it becomes a learning tool. Moving forward, I plan to use AI for drafts, troubleshooting, and clarification, but I will not submit anything I cannot explain in my own words. This lab helped me see that responsible AI use is less about avoiding it and more about maintaining agency and understanding while using it.</p>
+<p>
+In terms of learning trade-offs, vibe coding helps when it supports learning and slows you down enough to understand what’s happening. It hurts when it becomes a shortcut that replaces the learning process. Going forward, I’ll use AI for drafts, troubleshooting, and clarification, but I won’t submit code I can’t explain in my own words. This lab helped me see that responsible AI use is really about keeping agency and understanding while still using the tool.
+</p>
 </section>
 
 <section>
 <h2>Self-Assessment</h2>
 
-<p>After completing this lab, I took time to honestly evaluate my work. I can clearly separate what I understand from what I still rely on AI to help with. I understand the logic of the dark mode feature and how the class toggle works, but I still occasionally need syntax reminders for event listeners and JavaScript structure. I’m comfortable explaining what the code does and why it works, even if I couldn’t rewrite it perfectly from memory.</p>
-
-<p>I did not accept the AI’s output blindly. I simplified parts of the generated code so it matched my current skill level and the structure of my site. The debugging experiment also forced me to identify the issue myself before using AI to confirm it. That helped reinforce that AI should support my reasoning, not replace it.</p>
+<p>After completing this lab, I took time to honestly evaluate my work. I can clearly separate what I understand from what I still rely on AI to help with. I understand the logic of the dark mode feature and how the class toggle works, but I still occasionally need syntax reminders for event listeners and JavaScript structure. I’m comfortable explaining what the code does and why it works, even if I couldn’t rewrite it perfectly from memory. I did not accept the AI’s output blindly. I simplified parts of the generated code so it matched my current skill level and the structure of my site. The debugging experiment also forced me to identify the issue myself before using AI to confirm it. That helped reinforce that AI should support my reasoning, not replace it.</p>
 
 <p>I also believe I chose experiments that challenged me without being unrealistic. Adding a new feature required me to integrate JavaScript into an existing site, which pushed me beyond static HTML and CSS. At the same time, I avoided overly advanced solutions that I would not be able to defend. Most importantly, this reflection reflects my actual thinking. I am not claiming to fully “master” anything. Instead, I am learning how to use AI responsibly while still maintaining ownership of my work and growth as a programmer.</p>
+</section>
+
+ <section>
+            <h2>My Guidelines for Using AI in Coding</h2>
+
+            <ul>
+                <li>I will use AI for initial drafts, syntax reminders, and troubleshooting when I’m stuck.</li>
+                <li>I will not submit code I can’t explain in my own words.</li>
+                <li>If the code feels too complex for my current skill level, I will simplify it before keeping it.</li>
+                <li>I will review AI-generated code line-by-line instead of assuming it’s correct.</li>
+                <li>I will test changes across my site before committing them, especially navigation and styling.</li>
+                <li>I will be transparent about what AI contributed vs. what I changed or wrote myself.</li>
+            </ul>
+        </section>
 
 </main>
 
