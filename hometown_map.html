@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1daae898a2418702af9419b5189b40bb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1daae898a2418702af9419b5189b40bb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1daae898a2418702af9419b5189b40bb = L.map(
+                "map_1daae898a2418702af9419b5189b40bb",
+                {
+                    center: [33.466, -117.698],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dcde085d5a60f1685f2d568e8139c115 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dcde085d5a60f1685f2d568e8139c115.addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var marker_894429f16bbf77a9e48a0dce2a9bc573 = L.marker(
+                [33.468076, -117.698712],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_4718fa9c19e8b4b3d19d93e2c0847959 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0bb05e852cfd233ce8ba180c9a5b935c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bf9609214a4f8af3c2c0c8711d4b757 = $(`<div id="html_7bf9609214a4f8af3c2c0c8711d4b757" style="width: 100.0%; height: 100.0%;">         <h4>Bear Coast Coffee</h4>         <p>A cozy coffee spot in Dana Point that’s perfect for starting the day or catching up with friends. I love coming here for their lattes and the overall vibe, it’s always super welcoming and relaxed. It’s one of my go-to places when I want something quick but still really good quality.</p>         <img src="https://cdn.shopify.com/s/files/1/0413/2889/files/IMG_0294_large.JPG?v=1538755242" width="200">         </div>`)[0];
+                popup_0bb05e852cfd233ce8ba180c9a5b935c.setContent(html_7bf9609214a4f8af3c2c0c8711d4b757);
+            
+        
+
+        marker_894429f16bbf77a9e48a0dce2a9bc573.bindPopup(popup_0bb05e852cfd233ce8ba180c9a5b935c)
+        ;
+
+        
+    
+    
+                marker_894429f16bbf77a9e48a0dce2a9bc573.setIcon(icon_4718fa9c19e8b4b3d19d93e2c0847959);
+            
+    
+            var marker_fd653d5bd8ed078ecf5d748da111f006 = L.marker(
+                [33.461238, -117.706748],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_e77e7d88528beff0c8acd62250ee1ab7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0a27f6b3360c9edb589e4b7a256d10b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f4073d246aaecd700a4250defab314d3 = $(`<div id="html_f4073d246aaecd700a4250defab314d3" style="width: 100.0%; height: 100.0%;">         <h4>Coffee Importers</h4>         <p>This is one of my favorite spots in Dana Point because it’s right on the harbor and perfect for a chill morning. I always go here when I’m home.</p>         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeEwJ3EXHDKlSXJTfkRq44_Zbox_z48_EHQg&s" width="200">         </div>`)[0];
+                popup_c0a27f6b3360c9edb589e4b7a256d10b.setContent(html_f4073d246aaecd700a4250defab314d3);
+            
+        
+
+        marker_fd653d5bd8ed078ecf5d748da111f006.bindPopup(popup_c0a27f6b3360c9edb589e4b7a256d10b)
+        ;
+
+        
+    
+    
+                marker_fd653d5bd8ed078ecf5d748da111f006.setIcon(icon_e77e7d88528beff0c8acd62250ee1ab7);
+            
+    
+            var marker_0e65dc5834c4f43f07c74662182c6a7e = L.marker(
+                [33.46527, -117.70635],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_809f17bb8c553e0a3888455b001bfc08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_138cf5f8e45d180169affef457dbf43c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_509c1b5d9ab437e68eedcb1857ed97d6 = $(`<div id="html_509c1b5d9ab437e68eedcb1857ed97d6" style="width: 100.0%; height: 100.0%;">         <h4>Coastal Kitchen</h4>         <p>One of my favorite spots in Dana Point with amazing ocean views. It’s perfect for brunch or dinner and has such a fun, coastal vibe. I would definitely take a friend here for the atmosphere and food.</p>         <img src="https://www.ocregister.com/wp-content/uploads/migration/oel/oeli2k-b88785965z.120161005151850000gkpimgm3.10.jpg?w=1800&resize=1800,1800 " width="200">         </div>`)[0];
+                popup_138cf5f8e45d180169affef457dbf43c.setContent(html_509c1b5d9ab437e68eedcb1857ed97d6);
+            
+        
+
+        marker_0e65dc5834c4f43f07c74662182c6a7e.bindPopup(popup_138cf5f8e45d180169affef457dbf43c)
+        ;
+
+        
+    
+    
+                marker_0e65dc5834c4f43f07c74662182c6a7e.setIcon(icon_809f17bb8c553e0a3888455b001bfc08);
+            
+    
+            var marker_35a6638f35fb4df4dcfd23dcd93b2e59 = L.marker(
+                [33.46526, -117.68475],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_ba21dc722c1e5129110d1742098a9724 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c51af8bd2cceac63399df1c3939186b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e40934fbc033bb4bbb607b09794f1e93 = $(`<div id="html_e40934fbc033bb4bbb607b09794f1e93" style="width: 100.0%; height: 100.0%;">         <h4>White Rooster</h4>         <p>This is one of my go-to breakfast spots in Dana Point. The food is really good and the vibe is super cute and relaxed. It’s a great place to start the day.</p>         <img src="https://img.p.mapq.st/?url=https%3A%2F%2Fs3-media0.fl.yelpcdn.com%2Fbphoto%2FJYDvz7Yw5gJYpDfZnkc-lw%2Fl.jpg&w=3840&q=75 " width="200">         </div>`)[0];
+                popup_6c51af8bd2cceac63399df1c3939186b.setContent(html_e40934fbc033bb4bbb607b09794f1e93);
+            
+        
+
+        marker_35a6638f35fb4df4dcfd23dcd93b2e59.bindPopup(popup_6c51af8bd2cceac63399df1c3939186b)
+        ;
+
+        
+    
+    
+                marker_35a6638f35fb4df4dcfd23dcd93b2e59.setIcon(icon_ba21dc722c1e5129110d1742098a9724);
+            
+    
+            var marker_f2eb8d301fa6d57dc31ed95f70b43fb8 = L.marker(
+                [33.467797, -117.69958],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_cd5e4813e30bcc719805791659337ffb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bba933e98eba85f1885c60fa222a1c9b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22e3081daabd487d0abaa50966c72deb = $(`<div id="html_22e3081daabd487d0abaa50966c72deb" style="width: 100.0%; height: 100.0%;">         <h4>Hook & Anchor </h4>         <p>A really fun seafood spot with great food and drinks. I love the atmosphere here and it’s a place I’d take someone visiting because it feels very “Dana Point.”</p>         <img src="https://images.squarespace-cdn.com/content/v1/682b73795b94600005b4b9b3/aa8cfa30-25ef-446e-9536-ea0fe8ad15a5/PL100260.JPG" width="200">         </div>`)[0];
+                popup_bba933e98eba85f1885c60fa222a1c9b.setContent(html_22e3081daabd487d0abaa50966c72deb);
+            
+        
+
+        marker_f2eb8d301fa6d57dc31ed95f70b43fb8.bindPopup(popup_bba933e98eba85f1885c60fa222a1c9b)
+        ;
+
+        
+    
+    
+                marker_f2eb8d301fa6d57dc31ed95f70b43fb8.setIcon(icon_cd5e4813e30bcc719805791659337ffb);
+            
+    
+            var marker_58aface1c21fbe283e9f4fbc8539b443 = L.marker(
+                [33.46044, -117.69381],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_39a03f8ad995fb51fdfbcb358e06d937 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd387c0a16f81a45909ad591210fdc9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c3a2d56ce861ec456f5ae6c85e55eebc = $(`<div id="html_c3a2d56ce861ec456f5ae6c85e55eebc" style="width: 100.0%; height: 100.0%;">         <h4>Dana Point Harbor</h4>         <p>A central part of the city where there are restaurants, shops, and boats all in one area. It’s always lively and is a place I go often, whether it’s for food, walking around, or just enjoying the water.</p>         <img src="https://danapointharbor.com/wp-content/uploads/2020/08/babybeach.jpg" width="200">         </div>`)[0];
+                popup_cd387c0a16f81a45909ad591210fdc9f.setContent(html_c3a2d56ce861ec456f5ae6c85e55eebc);
+            
+        
+
+        marker_58aface1c21fbe283e9f4fbc8539b443.bindPopup(popup_cd387c0a16f81a45909ad591210fdc9f)
+        ;
+
+        
+    
+    
+                marker_58aface1c21fbe283e9f4fbc8539b443.setIcon(icon_39a03f8ad995fb51fdfbcb358e06d937);
+            
+    
+            var marker_28aace865b3c4b42e443699ac6fa094c = L.marker(
+                [33.463114, -117.697689],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_c8b395f55835bbcbc6573bb5741ab38d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e313ba464e626de5696b5fc3b1b8aab1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cfaef1512dcb68df80c669efdcc0cbcf = $(`<div id="html_cfaef1512dcb68df80c669efdcc0cbcf" style="width: 100.0%; height: 100.0%;">         <h4>Doris Walker Overlook</h4>         <p>One of the best views in Dana Point with a full overlook of the ocean and harbor. It’s a really peaceful place to walk around, watch the sunset, and just take in how pretty the area is.</p>         <img src="https://www.greatofficiants.com/wp-content/uploads/2020/12/Heritage-Park-Overlook-compass-and-benches.jpg" width="200">         </div>`)[0];
+                popup_e313ba464e626de5696b5fc3b1b8aab1.setContent(html_cfaef1512dcb68df80c669efdcc0cbcf);
+            
+        
+
+        marker_28aace865b3c4b42e443699ac6fa094c.bindPopup(popup_e313ba464e626de5696b5fc3b1b8aab1)
+        ;
+
+        
+    
+    
+                marker_28aace865b3c4b42e443699ac6fa094c.setIcon(icon_c8b395f55835bbcbc6573bb5741ab38d);
+            
+    
+            var marker_4215d8426646699929f530799545b361 = L.marker(
+                [33.461238, -117.706748],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_4ff1885f1ef1bab9c6199cd3579ed30c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e3a29def9c9bbd0849ac73153d413ba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd2a1ff4586a909f74b98c737080212c = $(`<div id="html_fd2a1ff4586a909f74b98c737080212c" style="width: 100.0%; height: 100.0%;">         <h4>Dana Point Caves</h4>         <p>A super cool scenic spot along the coast with cliffs, caves, and amazing ocean views. It’s one of those places that feels very “Dana Point” and is perfect for exploring or taking pictures.</p>         <img src="https://images.squarespace-cdn.com/content/v1/5c81f8d10b77bd7cfa2c6904/1594477678169-70S22PFPA5TNEAXB72V0/IMG_6455.JPG?format=1000w" width="200">         </div>`)[0];
+                popup_9e3a29def9c9bbd0849ac73153d413ba.setContent(html_fd2a1ff4586a909f74b98c737080212c);
+            
+        
+
+        marker_4215d8426646699929f530799545b361.bindPopup(popup_9e3a29def9c9bbd0849ac73153d413ba)
+        ;
+
+        
+    
+    
+                marker_4215d8426646699929f530799545b361.setIcon(icon_4ff1885f1ef1bab9c6199cd3579ed30c);
+            
+    
+            var marker_4849d773155f2829558c35dfe7eda127 = L.marker(
+                [33.462538, -117.685686],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_12ecd13616b50daff2af7b6deae6af58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f24c10886c060bafe6dffa4cb06e84ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_500c4a5f00123706079218cfaa8a13d8 = $(`<div id="html_500c4a5f00123706079218cfaa8a13d8" style="width: 100.0%; height: 100.0%;">         <h4>Doheny State Beach</h4>         <p>One of the most popular beaches in Dana Point with a really relaxed and easygoing vibe. It’s perfect for surfing, picnics, and hanging out by the water, especially with how accessible everything is. I’ve spent so many days here just walking the beach and watching the sunset.</p>         <img src="https://metrolinktrains.com/globalassets/explore/orange/doheny-state-beach.jpg" width="200">         </div>`)[0];
+                popup_f24c10886c060bafe6dffa4cb06e84ef.setContent(html_500c4a5f00123706079218cfaa8a13d8);
+            
+        
+
+        marker_4849d773155f2829558c35dfe7eda127.bindPopup(popup_f24c10886c060bafe6dffa4cb06e84ef)
+        ;
+
+        
+    
+    
+                marker_4849d773155f2829558c35dfe7eda127.setIcon(icon_12ecd13616b50daff2af7b6deae6af58);
+            
+    
+            var marker_119447ba3f035475b01f9fd7e29dd31e = L.marker(
+                [33.463111, -117.703424],
+                {
+}
+            ).addTo(map_1daae898a2418702af9419b5189b40bb);
+        
+    
+            var icon_8bfe712568140a8a72465434831c4ec6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be9074b112b77e611c037dd98fbccba6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3f3b028bb31f15e21e986bf632f98b4 = $(`<div id="html_a3f3b028bb31f15e21e986bf632f98b4" style="width: 100.0%; height: 100.0%;">         <h4>Baby Beach / Mother's Beach</h4>         <p>A calm, protected beach inside the harbor that’s perfect for swimming and paddleboarding. The water is usually super gentle, which makes it a great spot to just relax without big waves. It’s one of my favorite places to go when I want something peaceful and less crowded.</p>         <img src="https://funorangecountyparks.com/wp-content/uploads/2011/08/i-JmrpJV6-M.jpg" width="200">         </div>`)[0];
+                popup_be9074b112b77e611c037dd98fbccba6.setContent(html_a3f3b028bb31f15e21e986bf632f98b4);
+            
+        
+
+        marker_119447ba3f035475b01f9fd7e29dd31e.bindPopup(popup_be9074b112b77e611c037dd98fbccba6)
+        ;
+
+        
+    
+    
+                marker_119447ba3f035475b01f9fd7e29dd31e.setIcon(icon_8bfe712568140a8a72465434831c4ec6);
+            
+</script>
+</html>
