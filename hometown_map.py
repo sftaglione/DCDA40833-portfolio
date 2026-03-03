@@ -3,7 +3,7 @@ import requests
 import folium
 
 # 🔑 YOUR MAPBOX TOKEN
-access_token = "pk.eyJ1Ijoic29waGlhLXRhZ2xpb25lNDQ3MSIsImEiOiJjbWx0bXdwNGIwMXhmM2dxM2t1ZHdhejdzIn0.mlD3NZ7riyJq-L6EdRDF_g"
+access_token = ""
 
 # 📍 Load your CSV
 df = pd.read_csv("hometown_locations.csv")
