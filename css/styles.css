@@ -1,18 +1,18 @@
 /* =========================
-   DCDA 40833 Skills Portfolio Template
-   CSS Stylesheet for Student Portfolios
+   DCDA 40833 Skills Portfolio
+   CSS Stylesheet
    ========================= */
 
 /* =========================
-    <!-- I customized the layout and styling of this page using CSS to match my personal style while keeping it easy to read-->
+   Color Variables
    ========================= */
 :root {
-    --primary-color: #c784ff;      /* Purple */
-    --secondary-color: #3e0468;    /* Dark Purple */
-    --accent-color: #c784ff;       /* Purple accent */
-    --text-color: #333;            /* Dark gray for text */
-    --text-secondary: #000000;     /* Black for captions */
-    --bg-color: #e6e0ea;           /* Light background */
+    --primary-color: #c784ff;
+    --secondary-color: #3e0468;
+    --accent-color: #c784ff;
+    --text-color: #333;
+    --text-secondary: #000000;
+    --bg-color: #e6e0ea;
     --white: #ffffff;
 }
 
@@ -26,10 +26,14 @@
 }
 
 html {
-    scroll-behavior: smooth;       /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
@@ -39,7 +43,6 @@ body {
 /* =========================
    Header & Navigation
    ========================= */
-/* Style semantic tags directly - no classes needed! */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -54,12 +57,11 @@ header nav {
 
 header h1 {
     color: white;
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 0.5rem;
     font-size: 2rem;
 }
 
 header p {
-    margin: 0;
     opacity: 0.9;
     font-size: 1.1rem;
 }
@@ -67,28 +69,25 @@ header p {
 nav {
     background-color: #3d1461;
     padding: 0.75rem;
-    display: flex;              /* Make nav a flex container */
-    justify-content: center;    /* Center the ul inside nav */
-    position: sticky;           /* Stick to top when scrolling */
+    display: flex;
+    justify-content: center;
+    position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the navigation list */
 nav ul {
-    list-style: none;           /* Remove bullets */
-    padding: 0;                 /* Remove default padding */
-    margin: 0;                  /* Remove default margin */
-    display: flex;              /* Arrange items horizontally */
-    flex-direction: row;        /* Explicit: horizontal on desktop */
-    justify-content: center;    /* Center the items */
-    gap: 1rem;                  /* Space between items */
-    flex-wrap: wrap;            /* Wrap on small screens */
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav li {
-    list-style: none;           /* Extra insurance - remove bullets */
+    list-style: none;
 }
 
 nav a {
@@ -106,36 +105,29 @@ nav a:hover {
 /* =========================
    Main Content
    ========================= */
-/* Style main semantic tag directly */
 main {
-    max-width: 900px;          /* Don't get too wide */
-    margin: 2rem auto;         /* Center horizontally */
-    padding: 0 1rem;           /* Space on sides for mobile */
-}
-
-main {
+    flex: 1;
+    width: 100%;
     max-width: 900px;
-    margin: 3rem auto; /* increase top/bottom spacing */
+    margin: 3rem auto;
     padding: 0 1rem;
 }
 
-/* All sections inside main get consistent styling */
 main section {
     background-color: white;
     padding: 2rem;
-    margin-bottom: 2rem;       /* Space between sections */
-    border-radius: 8px;        /* Rounded corners */
+    margin-bottom: 2rem;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style h2 headings inside sections */
 main section h2 {
     color: var(--primary-color);
     border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     font-size: 1.875rem;
-    margin-top: 0.5rem;
 }
 
 main section h3 {
@@ -145,13 +137,11 @@ main section h3 {
     font-size: 1.5rem;
 }
 
-/* Paragraphs inside sections */
 main section p {
     margin-bottom: 1rem;
     line-height: 1.8;
 }
 
-/* Lists inside sections */
 main section ul,
 main section ol {
     margin: 1rem 0 1rem 2rem;
@@ -165,39 +155,31 @@ main section li {
 /* =========================
    Data Visualizations
    ========================= */
-/* Container for charts and images */
 .viz-container {
-    margin: 3rem 0;
+    margin: 3rem 0 4rem 0;
     text-align: center;
 }
 
 .viz-container img {
     width: 300px;
-    max-width: 100%;   /* prevents overflow on small screens */
+    max-width: 100%;
     height: auto;
     border-radius: 12px;
-    border: 10px solid var(--secondary-color); /* Border added */
+    border: 10px solid var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.5rem;
     display: block;
     margin: 0 auto 0.5rem;
 }
 
-/* Figure captions */
 .viz-container figcaption {
     font-style: italic;
     color: var(--text-secondary);
     font-size: 0.9rem;
-   margin-top: 1rem;
-    margin-bottom: 2rem; /* THIS creates separation from next section */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
 }
 
-.viz-container {
-    margin: 3rem 0 4rem 0; /* bigger bottom space */
-}
-
-/* Grid layout for multiple visualizations */
 .viz-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,25 +190,24 @@ main section li {
 /* =========================
    Code Blocks
    ========================= */
-/* Improve pre/code styling for Python code */
 pre {
-    background: #2d2d2d;          /* Dark background */
-    color: #f8f8f2;               /* Light text */
-    border: none;
+    background: #f4f4f4;
+    color: #333;
+    border: 5px solid var(--secondary-color);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     overflow-x: auto;
     margin: 1.5rem 0;
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 code {
-    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-family: 'SF Mono', Monaco, 'Roboto Mono', Consolas, monospace;
 }
 
-/* Inline code (inside paragraphs) */
-p code, li code {
+p code,
+li code {
     background: #f4f4f4;
     color: #c7254e;
     padding: 0.2rem 0.4rem;
@@ -234,7 +215,6 @@ p code, li code {
     font-size: 0.9em;
 }
 
-/* Code block titles */
 .code-title {
     background: #1e1e1e;
     color: #9cdcfe;
@@ -260,7 +240,8 @@ table {
     background: white;
 }
 
-th, td {
+th,
+td {
     padding: 0.75rem 1rem;
     text-align: left;
     border: 1px solid #e2e8f0;
@@ -291,7 +272,6 @@ tr:nth-child(even) {
     font-weight: 500;
 }
 
-/* Highlight key rows */
 .results-table tr.highlight {
     background: #fff3cd;
     font-weight: bold;
@@ -320,7 +300,6 @@ tr:nth-child(even) {
 /* =========================
    Portfolio Cards
    ========================= */
-/* Grid layout for portfolio cards on home page */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -328,7 +307,6 @@ tr:nth-child(even) {
     margin: 2rem 0;
 }
 
-/* Individual portfolio card styling */
 .portfolio-card {
     display: block;
     background: white;
@@ -349,18 +327,17 @@ tr:nth-child(even) {
 
 .portfolio-card h3 {
     color: var(--primary-color);
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
 }
 
 .portfolio-card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    margin: 0.75rem 0 0 0;
+    margin-top: 0.75rem;
     line-height: 1.5;
 }
 
-/* Lab tag badge on portfolio cards */
 .lab-tag {
     display: inline-block;
     background: var(--secondary-color);
@@ -374,14 +351,14 @@ tr:nth-child(even) {
 }
 
 /* =========================
-   Footer (semantic tag)
+   Footer
    ========================= */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5rem;
-    margin-top: 2rem;
+    margin-top: auto;
 }
 
 footer a {
@@ -394,79 +371,8 @@ footer a:hover {
 }
 
 /* =========================
-   Responsive Design (Mobile)
+   Dark Mode Styles
    ========================= */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;     /* Smaller on mobile */
-    }
-
-    nav {
-        font-size: 0.9rem;
-    }
-
-    /* Stack navigation vertically on mobile */
-    nav ul {
-        flex-direction: column;  /* Change from row to column */
-        align-items: center;     /* Center the stacked items */
-    }
-
-    nav a {
-        display: block;          /* Full width for easier tapping */
-        width: 100%;
-        text-align: center;
-    }
-
-    main section {
-        padding: 1rem;         /* Less padding on mobile */
-    }
-
-    .viz-grid {
-        grid-template-columns: 1fr;  /* Single column on mobile */
-    }
-}
-
-/* =========================
-   Print Styles (Optional)
-   ========================= */
-@media print {
-    nav {
-        display: none;
-    }
-
-    main section {
-        box-shadow: none;
-        page-break-inside: avoid;
-    }
-}
-
-/* =========================
-   Code Blocks (Softer Style)
-   ========================= */
-
-pre {
-    background: #f4f4f4;      /* Light gray instead of black */
-    color: #333;
-    border-left: 5px solid var(--secondary-color);
-    border-right: 5px solid var(--secondary-color);
-    border-top: 5px solid var(--secondary-color);
-    border-bottom: 5px solid var(--secondary-color);
-    border-radius: 8px;
-    padding: 1.25rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-code {
-    font-family: 'SF Mono', Monaco, 'Roboto Mono', Consolas, monospace;
-}
-
-/* =========================
-   Dark Mode Styles (Lab 05)
-   ========================= */
-
 body.dark-mode {
     background-color: #1a1a1a;
     color: #f4f4f4;
@@ -488,17 +394,14 @@ body.dark-mode footer {
     background-color: #1f1f1f;
 }
 
-/* Keep nav links white in dark mode */
 body.dark-mode nav a,
 body.dark-mode .dark-toggle {
     color: white;
 }
 
-
 /* =========================
-   Dark Mode Toggle Styling
+   Dark Mode Toggle
    ========================= */
-
 .dark-toggle {
     background: none;
     border: none;
@@ -515,6 +418,52 @@ body.dark-mode .dark-toggle {
     background-color: var(--primary-color);
 }
 
-     body.dark-mode .dark-toggle {
+body.dark-mode .dark-toggle {
     font-weight: 600;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    main section {
+        padding: 1rem;
+    }
+
+    .viz-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   Print Styles
+   ========================= */
+@media print {
+    nav {
+        display: none;
+    }
+
+    main section {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
 }

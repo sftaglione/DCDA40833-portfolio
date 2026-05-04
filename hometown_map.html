@@ -11,19 +11,17 @@
 
 <body>
 
- <!-- Navigation: Links to all pages -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lab02.html">Lab 02: AI Experimentation & Evaluation</a></li>
-            <li><a href="lab03.html">Lab 03: Visualization Critique</a></li>
-            <li><a href="lab04.html">Lab 04: Tableau Viz</a></li>
-            <li><a href="lab05.html">Lab 05: Vibe Coding</a></li>
-            <li><a href="hometown_map.html">Hometown Map</a></li>
-            <li><button id="darkModeBtn" class="dark-toggle">Dark Mode</button></li>
-
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab02.html">Lab 02: AI Experimentation & Evaluation</a></li>
+        <li><a href="lab03.html">Lab 03: Visualization Critique</a></li>
+        <li><a href="lab04.html">Lab 04: Tableau Viz</a></li>
+        <li><a href="lab05.html">Lab 05: Vibe Coding</a></li>
+        <li><a href="hometown_map.html">Hometown Map</a></li>
+        <li><button id="darkModeBtn" class="dark-toggle">Dark Mode</button></li>
+    </ul>
+</nav>
 
 <header>
     <h1>Hometown Mapping</h1>
@@ -31,547 +29,54 @@
 </header>
 
 <main>
-<!-- Section explaining what the assignment required -->
-<section>
-<h2>Lab Requirements</h2>
 
-<p>
-For this lab we created an interactive hometown map using Python. I built a dataset of locations from my hometown of Dana Point, organized the information in a CSV file, and used Python mapping tools to generate an interactive map with markers and pop-up descriptions for each location.
-</p>
-
-</section>
-
-<!-- Section explaining what the lab demonstrates about my abilities -->
-<section>
-<h2>What This Lab Demonstrates</h2>
-
-<p>
-This lab demonstrates my ability to combine coding, data organization, and visualization. By using Python to generate an interactive map, I was able to turn location data into something visual and engaging. It also shows how coding can be used to present real places and experiences in a digital format.
-</p>
-
-</section>
-</main>
-
-<main>
     <section>
-<h2>Interactive Map</h2>
+        <h2>Lab Requirements</h2>
+        <p>
+            For this lab we created an interactive hometown map using Python. I built a dataset of locations from my hometown of Dana Point, organized the information in a CSV file, and used Python mapping tools to generate an interactive map with markers and pop-up descriptions for each location.
+        </p>
+    </section>
 
-<p>
-Below is the interactive hometown map I generated using Python and Folium. 
-Each marker represents a location in Dana Point that I selected for the project, 
-including restaurants, beaches, and scenic viewpoints. When users click on a 
-marker, a pop-up appears with a short description and image of the location. 
-This demonstrates how geographic data can be transformed into an interactive 
-visual experience using Python mapping tools.
-</p>
+    <section>
+        <h2>What This Lab Demonstrates</h2>
+        <p>
+            This lab demonstrates my ability to combine coding, data organization, and visualization. By using Python to generate an interactive map, I was able to turn location data into something visual and engaging. It also shows how coding can be used to present real places and experiences in a digital format.
+        </p>
+    </section>
 
-</section>
+    <section>
+        <h2>Interactive Map</h2>
+        <p>
+            Below is the interactive hometown map I generated using Python and Folium. Each marker represents a location in Dana Point that I selected for the project, including restaurants, beaches, and scenic viewpoints. When users click on a marker, a pop-up appears with a short description and image of the location.
+        </p>
+        <p>
+            Creating this map helped me better understand how coding can turn raw data into something interactive and meaningful. Instead of just listing locations in a dataset, I was able to visualize them in a way that shows patterns and context, like how many of my favorite places are centered around the harbor area. It also showed me how small coding decisions, like customizing markers or pop-ups, can improve how users experience and interact with the data. I also learned that troubleshooting small issues, like file paths and map rendering, is just as important as building the map itself.
+        </p>
+
+        <div style="width: 100%; height: 500px; border: 5px solid #3e0468; border-radius: 8px; overflow: hidden; margin-top: 1.5rem;">
+    <iframe
+        src="hometown_map_generated.html"
+        width="100%"
+        height="100%"
+        style="border: none;">
+    </iframe>
+</div>
+    </section>
+
 </main>
 
-<!-- Interactive hometown map generated with Python and Folium. The map displays locations from hometown_locations.csv and includes markers with pop-ups and images. -->
-
-<!-- This section contains the interactive map generated in Lab 06. The map was created using Python and Folium with location data stored in hometown_locations.csv. Each marker includes a popup description and image for the selected location. -->
-
-<head>
-    
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_6ae4b06214ffbc02d1657dd0423b4402 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-
-            <style>html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            </style>
-
-            <style>#map {
-                position:absolute;
-                top:0;
-                bottom:0;
-                right:0;
-                left:0;
-                }
-            </style>
-
-            <script>
-                L_NO_TOUCH = false;
-                L_DISABLE_3D = false;
-            </script>
-
-        
-</head>
-<body>
-    
-    
-            <div class="folium-map" id="map_6ae4b06214ffbc02d1657dd0423b4402" ></div>
-        
-</body>
-<script>
-    
-    
-            var map_6ae4b06214ffbc02d1657dd0423b4402 = L.map(
-                "map_6ae4b06214ffbc02d1657dd0423b4402",
-                {
-                    center: [33.466, -117.698],
-                    crs: L.CRS.EPSG3857,
-                    ...{
-  "zoom": 13,
-  "zoomControl": true,
-  "preferCanvas": false,
-}
-
-                }
-            );
-
-            
-
-        
-    
-            var tile_layer_bbc6d74d203160ac1186aa4d70cc106c = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_bbc6d74d203160ac1186aa4d70cc106c.addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var marker_366c31aafafae9ad05a0808241121f66 = L.marker(
-                [33.46829, -117.69867],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_300a875a8225b8edf694115b60c661be = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_de11fc783c9654f75fd8566a27bfd073 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_40b2b0f60acc64169bec86e46e07d94f = $(`<div id="html_40b2b0f60acc64169bec86e46e07d94f" style="width: 100.0%; height: 100.0%;">         <h4>Bear Coast Coffee</h4>         <p>A cozy coffee spot in Dana Point that’s perfect for starting the day or catching up with friends. I love coming here for their lattes and the overall vibe, it’s always super welcoming and relaxed. It’s one of my go-to places when I want something quick but still really good quality.</p>         <img src="https://cdn.shopify.com/s/files/1/0413/2889/files/IMG_0294_large.JPG?v=1538755242" width="200">         </div>`)[0];
-                popup_de11fc783c9654f75fd8566a27bfd073.setContent(html_40b2b0f60acc64169bec86e46e07d94f);
-            
-        
-
-        marker_366c31aafafae9ad05a0808241121f66.bindPopup(popup_de11fc783c9654f75fd8566a27bfd073)
-        ;
-
-        
-    
-    
-                marker_366c31aafafae9ad05a0808241121f66.setIcon(icon_300a875a8225b8edf694115b60c661be);
-            
-    
-            var marker_d7f9847f8024397ab615482f90c78309 = L.marker(
-                [33.461486, -117.707057],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_13ce9f0641bd8f3bf2e8bf2743090de6 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_f3d6a5fd0d45bb934a48e9e0d630e664 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_677393454609ceaeaa8be6a69a61fd30 = $(`<div id="html_677393454609ceaeaa8be6a69a61fd30" style="width: 100.0%; height: 100.0%;">         <h4>Coffee Importers</h4>         <p>This is one of my favorite spots in Dana Point because it's right on the harbor and perfect for a chill morning. I always go here when I'm home.</p>         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeEwJ3EXHDKlSXJTfkRq44_Zbox_z48_EHQg&s" width="200">         </div>`)[0];
-                popup_f3d6a5fd0d45bb934a48e9e0d630e664.setContent(html_677393454609ceaeaa8be6a69a61fd30);
-            
-        
-
-        marker_d7f9847f8024397ab615482f90c78309.bindPopup(popup_f3d6a5fd0d45bb934a48e9e0d630e664)
-        ;
-
-        
-    
-    
-                marker_d7f9847f8024397ab615482f90c78309.setIcon(icon_13ce9f0641bd8f3bf2e8bf2743090de6);
-            
-    
-            var marker_a2eac84d1a79a5e33b7f85c9c73ac4ce = L.marker(
-                [33.46527, -117.70635],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_3de150e9ac3c8e2b8272879d7b09f37e = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_782538dce95db19993a115f07c38946b = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_ca383bafc11e3a9bac3d9a6632b72f98 = $(`<div id="html_ca383bafc11e3a9bac3d9a6632b72f98" style="width: 100.0%; height: 100.0%;">         <h4>Coastal Kitchen</h4>         <p>One of my favorite spots in Dana Point with amazing ocean views. It’s perfect for brunch or dinner and has such a fun, coastal vibe. I would definitely take a friend here for the atmosphere and food.</p>         <img src="https://www.ocregister.com/wp-content/uploads/migration/oel/oeli2k-b88785965z.120161005151850000gkpimgm3.10.jpg?w=1800&resize=1800,1800 " width="200">         </div>`)[0];
-                popup_782538dce95db19993a115f07c38946b.setContent(html_ca383bafc11e3a9bac3d9a6632b72f98);
-            
-        
-
-        marker_a2eac84d1a79a5e33b7f85c9c73ac4ce.bindPopup(popup_782538dce95db19993a115f07c38946b)
-        ;
-
-        
-    
-    
-                marker_a2eac84d1a79a5e33b7f85c9c73ac4ce.setIcon(icon_3de150e9ac3c8e2b8272879d7b09f37e);
-            
-    
-            var marker_99820b5a9433de96e8ce2e7c705e7407 = L.marker(
-                [33.46526, -117.68475],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_b74e78f896602ce152be8224c87de0f1 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_e6823ad8002b50a637524139ce734d6f = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_7ceeb9747c40a2a130eb3f38f9417d1a = $(`<div id="html_7ceeb9747c40a2a130eb3f38f9417d1a" style="width: 100.0%; height: 100.0%;">         <h4>White Rooster</h4>         <p>This is one of my go-to breakfast spots in Dana Point. The food is really good and the vibe is super cute and relaxed. It’s a great place to start the day.</p>         <img src="https://img.p.mapq.st/?url=https%3A%2F%2Fs3-media0.fl.yelpcdn.com%2Fbphoto%2FJYDvz7Yw5gJYpDfZnkc-lw%2Fl.jpg&w=3840&q=75 " width="200">         </div>`)[0];
-                popup_e6823ad8002b50a637524139ce734d6f.setContent(html_7ceeb9747c40a2a130eb3f38f9417d1a);
-            
-        
-
-        marker_99820b5a9433de96e8ce2e7c705e7407.bindPopup(popup_e6823ad8002b50a637524139ce734d6f)
-        ;
-
-        
-    
-    
-                marker_99820b5a9433de96e8ce2e7c705e7407.setIcon(icon_b74e78f896602ce152be8224c87de0f1);
-            
-    
-            var marker_21987f8363d6e88205952786f72d2d99 = L.marker(
-                [33.467797, -117.69958],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_d7ee32ff162888cc16d72ee96b2c9cb5 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_cce4237a377eb23b43cbfc51bd699969 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_72f3743f913d9a353831cc4b20513442 = $(`<div id="html_72f3743f913d9a353831cc4b20513442" style="width: 100.0%; height: 100.0%;">         <h4>Hook & Anchor </h4>         <p>A really fun seafood spot with great food and drinks. I love the atmosphere here and it’s a place I’d take someone visiting because it feels very “Dana Point.”</p>         <img src="https://images.squarespace-cdn.com/content/v1/682b73795b94600005b4b9b3/aa8cfa30-25ef-446e-9536-ea0fe8ad15a5/PL100260.JPG" width="200">         </div>`)[0];
-                popup_cce4237a377eb23b43cbfc51bd699969.setContent(html_72f3743f913d9a353831cc4b20513442);
-            
-        
-
-        marker_21987f8363d6e88205952786f72d2d99.bindPopup(popup_cce4237a377eb23b43cbfc51bd699969)
-        ;
-
-        
-    
-    
-                marker_21987f8363d6e88205952786f72d2d99.setIcon(icon_d7ee32ff162888cc16d72ee96b2c9cb5);
-            
-    
-            var marker_c2850831a64635bd0ed27ba9c2da4ffc = L.marker(
-                [33.46044, -117.69381],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_c1a36d8a9a05c45026653f71f8e995f6 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "purple",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_ec343e3df61182b47e28f69802bc9ba3 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_316f4d2a6a9e1fb462759e4059a93c6b = $(`<div id="html_316f4d2a6a9e1fb462759e4059a93c6b" style="width: 100.0%; height: 100.0%;">         <h4>Dana Point Harbor</h4>         <p>A central part of the city where there are restaurants, shops, and boats all in one area. It’s always lively and is a place I go often, whether it’s for food, walking around, or just enjoying the water.</p>         <img src="https://danapointharbor.com/wp-content/uploads/2020/08/babybeach.jpg" width="200">         </div>`)[0];
-                popup_ec343e3df61182b47e28f69802bc9ba3.setContent(html_316f4d2a6a9e1fb462759e4059a93c6b);
-            
-        
-
-        marker_c2850831a64635bd0ed27ba9c2da4ffc.bindPopup(popup_ec343e3df61182b47e28f69802bc9ba3)
-        ;
-
-        
-    
-    
-                marker_c2850831a64635bd0ed27ba9c2da4ffc.setIcon(icon_c1a36d8a9a05c45026653f71f8e995f6);
-            
-    
-            var marker_3b9abe6030c8fa3c9708e5c41025b086 = L.marker(
-                [33.463114, -117.697689],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_64a234002dd91203cfad91b7a5128eb6 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "purple",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_ad309d9eb3bd8679d24f1943f5267a03 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_30dc5c546ffd47e7da0f89321f935843 = $(`<div id="html_30dc5c546ffd47e7da0f89321f935843" style="width: 100.0%; height: 100.0%;">         <h4>Doris Walker Overlook</h4>         <p>One of the best views in Dana Point with a full overlook of the ocean and harbor. It’s a really peaceful place to walk around, watch the sunset, and just take in how pretty the area is.</p>         <img src="https://www.greatofficiants.com/wp-content/uploads/2020/12/Heritage-Park-Overlook-compass-and-benches.jpg" width="200">         </div>`)[0];
-                popup_ad309d9eb3bd8679d24f1943f5267a03.setContent(html_30dc5c546ffd47e7da0f89321f935843);
-            
-        
-
-        marker_3b9abe6030c8fa3c9708e5c41025b086.bindPopup(popup_ad309d9eb3bd8679d24f1943f5267a03)
-        ;
-
-        
-    
-    
-                marker_3b9abe6030c8fa3c9708e5c41025b086.setIcon(icon_64a234002dd91203cfad91b7a5128eb6);
-            
-    
-            var marker_a6dd20b6bb9723f1caf6b3b862d9d3cb = L.marker(
-                [33.461238, -117.706748],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_9521da0ea8afc4cafb5108e568d04382 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "purple",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_11ad85d9cdb25f32e6d91c11bb13bede = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_d6f174f29901ccc90a23d8971f8c82e0 = $(`<div id="html_d6f174f29901ccc90a23d8971f8c82e0" style="width: 100.0%; height: 100.0%;">         <h4>Dana Point Caves</h4>         <p>A super cool scenic spot along the coast with cliffs, caves, and amazing ocean views. It's one of those places that feels very Dana Point" and is perfect for exploring or taking pictures."</p>         <img src="https://images.squarespace-cdn.com/content/v1/5c81f8d10b77bd7cfa2c6904/1594477678169-70S22PFPA5TNEAXB72V0/IMG_6455.JPG?format=1000w" width="200">         </div>`)[0];
-                popup_11ad85d9cdb25f32e6d91c11bb13bede.setContent(html_d6f174f29901ccc90a23d8971f8c82e0);
-            
-        
-
-        marker_a6dd20b6bb9723f1caf6b3b862d9d3cb.bindPopup(popup_11ad85d9cdb25f32e6d91c11bb13bede)
-        ;
-
-        
-    
-    
-                marker_a6dd20b6bb9723f1caf6b3b862d9d3cb.setIcon(icon_9521da0ea8afc4cafb5108e568d04382);
-            
-    
-            var marker_3ec6e2b8a05cde4135402c2e98a6a161 = L.marker(
-                [33.462538, -117.685686],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_474fc80b70e41c4121058dc62791574c = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_f810d88d937ec5daa4f52c9d6baae543 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_c61e4d4de8050ebcb6cd108ba8ea080a = $(`<div id="html_c61e4d4de8050ebcb6cd108ba8ea080a" style="width: 100.0%; height: 100.0%;">         <h4>Doheny State Beach</h4>         <p>One of the most popular beaches in Dana Point with a really relaxed and easygoing vibe. It’s perfect for surfing, picnics, and hanging out by the water, especially with how accessible everything is. I’ve spent so many days here just walking the beach and watching the sunset.</p>         <img src="https://metrolinktrains.com/globalassets/explore/orange/doheny-state-beach.jpg" width="200">         </div>`)[0];
-                popup_f810d88d937ec5daa4f52c9d6baae543.setContent(html_c61e4d4de8050ebcb6cd108ba8ea080a);
-            
-        
-
-        marker_3ec6e2b8a05cde4135402c2e98a6a161.bindPopup(popup_f810d88d937ec5daa4f52c9d6baae543)
-        ;
-
-        
-    
-    
-                marker_3ec6e2b8a05cde4135402c2e98a6a161.setIcon(icon_474fc80b70e41c4121058dc62791574c);
-            
-    
-            var marker_8c30d8e3d97bd9b2ab08a8c0946ba102 = L.marker(
-                [33.463111, -117.703424],
-                {
-}
-            ).addTo(map_6ae4b06214ffbc02d1657dd0423b4402);
-        
-    
-            var icon_53e00f5d5a6b2e91ddc4867b0204e1a5 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_9af09b51c513524932786361436b60e2 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_51c1b54889b60af7df5c3d41c1e4ba1e = $(`<div id="html_51c1b54889b60af7df5c3d41c1e4ba1e" style="width: 100.0%; height: 100.0%;">         <h4>Baby Beach / Mother's Beach</h4>         <p>A calm, protected beach inside the harbor that’s perfect for swimming and paddleboarding. The water is usually super gentle, which makes it a great spot to just relax without big waves. It’s one of my favorite places to go when I want something peaceful and less crowded.</p>         <img src="https://funorangecountyparks.com/wp-content/uploads/2011/08/i-JmrpJV6-M.jpg" width="200">         </div>`)[0];
-                popup_9af09b51c513524932786361436b60e2.setContent(html_51c1b54889b60af7df5c3d41c1e4ba1e);
-            
-        
-
-        marker_8c30d8e3d97bd9b2ab08a8c0946ba102.bindPopup(popup_9af09b51c513524932786361436b60e2)
-        ;
-
-        
-    
-    
-                marker_8c30d8e3d97bd9b2ab08a8c0946ba102.setIcon(icon_53e00f5d5a6b2e91ddc4867b0204e1a5);
-            
-</script>
-</html>
-
- <!-- Footer: Links and copyright -->
- <footer>
+<footer>
     <p><a href="https://github.com/sftaglione/DCDA40833-portfolio">View my Repository on GitHub</a></p>
     <p>&copy; 2026 Sophia Taglione | DCDA 40833 | TCU</p>
 </footer>
 
-</body>
-</html>
-
 <script>
-    // I understand the logic: this selects the dark mode button from the page
     const darkBtn = document.getElementById("darkModeBtn");
 
-    // I understand what this does: when the button is clicked, it runs the function
     darkBtn.addEventListener("click", () => {
-
-        // I understand the logic: this toggles a class on the body
-        // If dark-mode is there, it removes it. If it's not, it adds it.
         document.body.classList.toggle("dark-mode");
-
     });
 </script>
-</main>
+
+</body>
+</html>
